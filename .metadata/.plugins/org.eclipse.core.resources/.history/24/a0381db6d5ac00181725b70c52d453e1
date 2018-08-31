@@ -1,0 +1,7 @@
+package com.org;
+
+import org.objectweb.asm.MethodVisitor;
+
+public class AddTimerMethodAdapter extends MethodVisitor{
+
+}

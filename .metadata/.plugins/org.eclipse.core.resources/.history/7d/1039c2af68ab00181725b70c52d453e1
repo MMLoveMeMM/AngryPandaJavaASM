@@ -1,0 +1,14 @@
+package com.org;
+
+public class MyClassLoader {
+	public Class defineClassFromClassFile(String className, byte[] classFile)
+			throws ClassFormatError {
+				return defineClass(className, classFile, 0, classFile.length);
+			}
+	}
+
+	public static void main(String[] args) {
+	GenerateClass generateClass = new GenerateClass();
+	generateClass.generateClass();
+	}
+}

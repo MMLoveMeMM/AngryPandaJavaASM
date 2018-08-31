@@ -1,0 +1,7 @@
+package com.org.time;
+
+import org.objectweb.asm.MethodAdapter;
+
+public class TimeStatMethodAdapter extends MethodAdapter {
+
+}

@@ -1,0 +1,42 @@
+package com.org;
+
+import java.io.PrintWriter;
+
+import org.objectweb.asm.ClassWriter;
+
+public class CreateAddOperImpl {
+	
+	public static void createImpl(String[] args) throws Exception {
+		ClassWriter cw = new ClassWriter(0);
+		PrintWriter printWriter = new PrintWriter(System.out);
+		TraceClassVisitor visitor = new TraceClassVisitor(cw, printWriter);
+	 
+		visitor.visit(V1_7, ACC_PUBLIC, "asm/demo/AddOperImpl", null, "java/lang/Object", new String[]{"asm/demo/AddOper"});
+	 
+		//添加构造方法
+		MethodVisitor mv = visitor.visitMethod(ACC_PUBLIC, "<init>", "()V", null, null);
+		mv.visitCode();
+		mv.visitVarInsn(ALOAD, 0);
+		mv.visitMethodInsn(INVOKESPECIAL, "java/lang/Object", "<init>", "()V");
+		mv.visitInsn(RETURN);
+		mv.visitMaxs(1, 1);
+		mv.visitEnd();
+	 
+		// 添加add方法
+		mv = visitor.visitMethod(ACC_PUBLIC, "add", "(II)I", null, null);
+		mv.visitCode();
+		mv.visitVarInsn(ILOAD, 1);
+		mv.visitVarInsn(ILOAD, 2);
+		mv.visitInsn(IADD);
+		mv.visitInsn(IRETURN);
+		mv.visitMaxs(2, 3);
+		mv.visitEnd();
+	 
+		visitor.visitEnd();
+	 
+		FileOutputStream fos = new FileOutputStream(new File("D:/code/asmdemo/out/production/asmdemo/asm/demo/AddOperImpl.class"));
+		fos.write(cw.toByteArray());
+		fos.close();
+	}
+	
+}

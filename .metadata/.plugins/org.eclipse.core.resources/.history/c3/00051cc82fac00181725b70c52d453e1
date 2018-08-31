@@ -1,0 +1,16 @@
+package com.org.modify.test1;
+
+import org.objectweb.asm.ClassAdapter;
+import org.objectweb.asm.ClassVisitor;
+
+public class GeneralClassAdapter extends ClassAdapter{
+
+	public GeneralClassAdapter(ClassVisitor cv) {
+		super(cv);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+
+}

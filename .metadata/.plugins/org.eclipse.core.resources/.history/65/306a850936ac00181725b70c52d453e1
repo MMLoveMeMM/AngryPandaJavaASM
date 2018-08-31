@@ -1,0 +1,5 @@
+package com.org.security;
+
+public class AddSecurityCheckMethodAdapter extends MethodAdapter{
+
+}

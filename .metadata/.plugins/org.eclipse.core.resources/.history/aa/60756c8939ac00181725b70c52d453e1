@@ -1,0 +1,9 @@
+package com.org.security;
+
+public class AddCondition2Code {
+
+	public void addCondition2Code() {
+		
+	}
+	
+}

@@ -1,0 +1,45 @@
+package com.org.time;
+
+import org.objectweb.asm.MethodAdapter;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
+
+public class TimeStatMethodAdapter extends MethodAdapter {
+
+	public TimeStatMethodAdapter(MethodVisitor mv) {
+		super(mv);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+    public void visitCode() {
+        //方法执行开始，增加TimeStat.start();
+        visitMethodInsn(Opcodes.INVOKESTATIC, "asm/timer/TimeStat", "start", "()V");
+        super.visitCode();
+    }
+
+    @Override
+    public void visitInsn(int opcode) {
+    /*  int IRETURN = 172; // visitInsn
+        int LRETURN = 173; // -
+        int FRETURN = 174; // -
+        int DRETURN = 175; // -
+        int ARETURN = 176; // -
+        int RETURN = 177; // -*/
+        //方法返回前，增加TimeStat.end();
+        if (opcode >= Opcodes.IRETURN && opcode <= Opcodes.RETURN) {
+            visitMethodInsn(Opcodes.INVOKESTATIC, "com/org/time/TimeStat", "end", "()V");
+        }
+        super.visitInsn(opcode);
+    }
+
+	@Override
+	public void visitEnd() {
+		// TODO Auto-generated method stub
+		super.visitEnd();
+	}
+    
+    
+    
+
+}

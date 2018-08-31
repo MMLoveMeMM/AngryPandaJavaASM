@@ -1,0 +1,9 @@
+package com.org.modify.test1;
+
+public class GenerateNewPerson {
+
+	public void modifyPersonClass() {
+		
+	}
+	
+}

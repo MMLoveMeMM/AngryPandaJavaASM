@@ -1,0 +1,9 @@
+INDEX VERSION 1.130+D:\workspace\asm\.metadata\.plugins\org.eclipse.jdt.core
+1539717131.index
+2438985416.index
+2604166402.index
+1277195692.index
+3626616132.index
+178503845.index
+385022659.index
+972308656.index

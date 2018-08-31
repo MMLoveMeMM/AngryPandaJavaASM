@@ -1,0 +1,9 @@
+package com.org.core;
+
+public class ASMClassReader {
+
+	public void readerInfo() {
+		
+	}
+	
+}

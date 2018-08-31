@@ -1,0 +1,7 @@
+package com.org.modify.test1;
+
+import org.objectweb.asm.ClassAdapter;
+
+public class GeneralClassAdapter extends ClassAdapter{
+
+}

@@ -1,0 +1,5 @@
+package com.org.modify.test1;
+
+public class GeneralClassAdapter extends ClassAdapter{
+
+}

@@ -1,0 +1,13 @@
+package com.org.time;
+
+import org.objectweb.asm.ClassAdapter;
+import org.objectweb.asm.ClassVisitor;
+
+public class TimeStatClassAdapter extends ClassAdapter{
+
+	public TimeStatClassAdapter(ClassVisitor cv) {
+		super(cv);
+		// TODO Auto-generated constructor stub
+	}
+
+}

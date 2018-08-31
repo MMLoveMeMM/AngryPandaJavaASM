@@ -1,0 +1,13 @@
+package com.org;
+
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.Opcodes;
+
+public class AopClassAdapter extends ClassVisitor implements Opcodes{
+
+	public AopClassAdapter(int arg0, ClassVisitor arg1) {
+		super(arg0, arg1);
+		// TODO Auto-generated constructor stub
+	}
+
+}

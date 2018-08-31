@@ -1,0 +1,13 @@
+package com.org.security;
+
+import org.objectweb.asm.ClassAdapter;
+import org.objectweb.asm.ClassVisitor;
+
+public class AddSecurityCheckClassAdapter extends ClassAdapter {
+
+	public AddSecurityCheckClassAdapter(ClassVisitor cv) {
+		super(cv);
+		// TODO Auto-generated constructor stub
+	}
+
+}

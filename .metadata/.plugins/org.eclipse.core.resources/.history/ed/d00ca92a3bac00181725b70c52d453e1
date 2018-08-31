@@ -1,0 +1,13 @@
+package com.org.time;
+
+import org.objectweb.asm.MethodAdapter;
+import org.objectweb.asm.MethodVisitor;
+
+public class TimeStatMethodAdapter extends MethodAdapter {
+
+	public TimeStatMethodAdapter(MethodVisitor mv) {
+		super(nv);
+		// TODO Auto-generated constructor stub
+	}
+
+}
